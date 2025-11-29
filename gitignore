@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+.venv
+venv/
+env/
+
+data/
+work_dir/
+logs/
+checkpoints/
+outputs/
+*.log
+
+# IDE / OS junk
+.vscode/
+.idea/
+.DS_Store
