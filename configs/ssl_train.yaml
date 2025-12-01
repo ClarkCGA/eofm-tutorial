@@ -2,8 +2,8 @@ Train_Validate:
 
 
   # Paths / data
-  data_path: "/app/data/pretrain_data_100"
-  log_dir: "/app/work_dir/exp_pretrain_100k/logs/"
+  data_path: "/app/data/tutorial_dataset"
+  log_dir: "/app/work_dir/tutorial_dataset/logs/"
   train_csv_name: "/app/data/catalog_2023.csv"
 
 
