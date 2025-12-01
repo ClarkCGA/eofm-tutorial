@@ -615,8 +615,20 @@ Adjust paths in `ssl_train.yaml` to match your own layout.
 
 ## 7. How to run pre-training
 
-- Docker image
-- python train.py --config configs/ssl_train.yaml
+Using Docker (Recommended)
+
+- docker build -t diffusion_gfm:latest .
+- docker run --rm --gpus all \
+  --shm-size=8g \
+  -v ./data:/app/data \
+  -v ./work_dir:/app/work_dir \
+  diffusion_gfm:latest \
+  --config configs/ssl_train.yaml
+
+
+Using a Local Python Environment
+
+- python run_it.py --config configs/ssl_train.yaml
 
 
 Once pretraining finishes, you can load the U-Net backbone weights into a supervised model and fine-tune on labeled downstream tasks.
