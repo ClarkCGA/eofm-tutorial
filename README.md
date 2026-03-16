@@ -3,6 +3,8 @@
 This repository implements a **denoising diffusion model** to pretrain a U‑Net on multi‑channel satellite chips *without labels*.  
 The model learns to **predict the noise** that was added to an input image at a random diffusion timestep. After pretraining, the U‑Net weights can be fine‑tuned on downstream tasks (e.g., semantic segmentation).
 
+This tutorial is part of the book chapter on "Self-Supervised Learning for Earth Observation Foundation Models" by H. Alemohammad, S. Khallaghi and R. Abedi published in "GeoAI for Earth Observation Imagery: Fundamentals and Practical Applications" by D. Lunga and R. Hänsch, 2026. 
+
 This README walks you through:
 
 1. How the diffusion setup works (noise schedule, time conditioning, loss)
@@ -12,6 +14,13 @@ This README walks you through:
 5. Explanation of the `ssl_train.yaml` configuration
 6. Pre-training dataset
 7. How to run pre-training
+
+---
+## Dataset
+
+You can download the dataset to pretrain this diffusion model from [Zenodo](https://doi.org/10.5281/zenodo.19025831). The dataset contains 100K chips of 4-band multispectral imagery from Planet NCFI collection. 
+
+*Note:* This 100K sample dataset demonstrates the process for pretraining the diffusion based SLL model but it may not be enough for a real-world foundation model application. You need to generate a larger and more representative dataset for pretraining a foundation model using this SSL methodology. 
 
 ---
 
